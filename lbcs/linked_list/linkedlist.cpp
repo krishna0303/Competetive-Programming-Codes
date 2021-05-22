@@ -3,6 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 //1 basic code of inked list
 struct Node{
     int data;
@@ -125,7 +126,7 @@ void printMiddle(){
 // head-->1>2>3>4>5>NULL     before reverse
 // NULL<1<2<3<4<5--<head  after reverse
 
-//to do reverse we have to reverse the direction of each node and as well as change the head value to lst node
+//to do reverse we have to reverse the direction of each node and as well as change the head value to last node
 
 void reversell(){
     Node *ptr,*temp,*temp2;
