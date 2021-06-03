@@ -106,9 +106,9 @@ int ExtractMax(heap*h){
 }
 
 //for deleting
-int deleteNode(heap*h,int i){
+void deleteNode(heap*h,int i){
     IncreaseVal(h,i,INT_MAX);
-    return ExtractMax(h);
+    int temp=ExtractMax(h);
 }
 
 //return maximum value without deleting any node
@@ -117,24 +117,45 @@ int getMax(heap*h){
 }
 
 
+vector <int> max_of_subarrays(heap*h,int *arr, int n, int k)
+    {
+        
+        vector<int>ans;
+        int i=0;
+        int j=k-1;
+        for(int x=0;x<k;x++){
+            insertVal(h,arr[x]);
+        }
+        j++;
+        while(j<n){
+            ans.push_back(getMax(h));
+            deleteNode(h,i);
+            i++;
+            insertVal(h,arr[j]);
+            j++;
 
+
+        }
+        return ans;
+
+        
+    }
 
 
 
 int main(){
 
-       
-heap* h=createMaxHeap(7);
-    insertVal(h,4);
-    insertVal(h,8);
-    insertVal(h,9);
-    insertVal(h,12);
-    insertVal(h,1);
-    
-    cout <<ExtractMax(h) << " ";
-    cout << getMax(h) << " ";
-   IncreaseVal(h,2,INT_MAX);
-    cout << getMax(h);
+     int n,k;
+     cin>>n>>k;
+     int *arr=new int[n];
+     for(int i=0;i<n;i++){
+         cin>>arr[i];
+     }
+     heap*h=createMaxHeap(k);  
+     vector<int>ans=max_of_subarrays(h,arr,n,k);
+     for(int i=0;i<ans.size();i++){
+         cout<<ans[i]<<" ";
+     }cout<<endl;
 
 
 
