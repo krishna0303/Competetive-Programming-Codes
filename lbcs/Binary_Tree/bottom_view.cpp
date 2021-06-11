@@ -37,9 +37,9 @@ vector<int> topView(Node *root)
        temp=q.front().first;
        int h=q.front().second;
        q.pop();
-       if(!m[h]){
+       
            m[h]=temp->data;
-       }
+       
        if(temp->left){
            q.push(make_pair(temp->left,h-1));
        }
