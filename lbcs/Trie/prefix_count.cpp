@@ -53,15 +53,6 @@ int prefixCount(TrieNode*root,string s){
             return 0;
         }
         temp=temp->child[idx];
-        
-        
-        
-        
-      
-        
-
-        
-
     }
     return temp->prefixCnt;
     

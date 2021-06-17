@@ -1,0 +1,3 @@
+To understand this concept follow pepcoding first video of bit manipulation tutorioal
+for right shift-  >> --n>>i=>(n/pow(2,i))  00110101 >>  00011010
+for left shift-  << --n<<i=>(n*pow(2,i))    00110101 <<  01101010
