@@ -1,6 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+
+in undirected graph
+
+total no of degree=2*no of edges
+
+
+
+
+*/
+
 
 int main(){
     int n,e;
