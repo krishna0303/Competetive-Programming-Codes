@@ -79,6 +79,7 @@ Following is a simple algorithm to find out whether a given graph is Birpartite 
             }
 
         }
+        return true;
             
        
 

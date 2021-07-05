@@ -115,6 +115,7 @@ Topological Sorting is mainly used for scheduling jobs from the given dependenci
 
 
 /*
+Kahn' algorithm
 Algorithm: Steps involved in finding the topological ordering of a DAG:
 Step-1: Compute in-degree (number of incoming edges) for each of the vertex present in the DAG and initialize the count of visited nodes as 0.
 

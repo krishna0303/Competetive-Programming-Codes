@@ -7,7 +7,7 @@ public:
         if(sr<0||sc<0||sr>=n||sc>=m||vis[sr][sc]==1||image[sr][sc]!=oldColor){
             return;
         }
-        vis[sr][sc]=1;
+        vis[sr][sc]=1;//it is used to handle when oldcolor and newcolor are same
         image[sr][sc]=newColor;
         dfs(vis,image,sr+1,sc,newColor,n,m,oldColor);
         dfs(vis,image,sr-1,sc,newColor,n,m,oldColor);

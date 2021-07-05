@@ -30,7 +30,7 @@ This multiple time calling DFS/BFS degrades the Time Complexity, hence Topologic
 
  as we know in topological sorting nodes are sorted on their dependency on another nodes so first node is not dependent any node 
  so but on this node there are lots of nodes are present in the forward direction so update on this node will affect all nodes whcih are adjacent to this node
- so after topological sort finding shortest path is saving much time of repetradly updation of all nodes
+ so after topological sort finding shortest path is saving much time of repeateadly updation of all nodes
 
    TC-O(V+E)*2
    SC-O(2V)
@@ -67,7 +67,7 @@ This multiple time calling DFS/BFS degrades the Time Complexity, hence Topologic
             int node=s.top();
             s.pop();
             for(auto it:adj[node]){
-                if(distance[it.first]!=INF){
+                if(distance[node]!=INF){
                      if((distance[node]+it.second)<distance[it.first]){
                     distance[it.first]=distance[node]+it.second;
                 }
