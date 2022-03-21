@@ -9,7 +9,7 @@
 using namespace std;
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 // The functions should be written in a way that array become sorted 
 // in increasing order when heapSort() is called.
 

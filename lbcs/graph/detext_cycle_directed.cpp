@@ -9,16 +9,7 @@ using namespace std;
 class Solution
 {
     public:
-	//USING DFS
 
-
-	//Function to detect cycle in a directed graph using DFS
-	// for better understanding watch striver video
-
-	//here visited array handle is node is one time visisted or not and oder array is handling is there any node who are already visited in a single move or in a path
-	//TC-O(n+E)
-	//SC-O(2n)
-	// auxilary space complexity-O(n)  it is used for recursion call
 
 	// bool solve(int sv,vector<int> adj[],vector<bool>&visited,vector<bool>&order){
 	//     order[sv]=true;

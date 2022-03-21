@@ -29,7 +29,7 @@ In the above example, we process vertices in order 0, 3, 4, 2, 1 (One by one pop
     
     
 
-    void TopologicalSort_DFS(vector<int>adj[],int V,int i,vector<int>visited,stack<int>&s){
+void TopologicalSort_DFS(vector<int>adj[],int V,int i,vector<int>visited,stack<int>&s){
         visited[i]=1;
         for(auto it:adj[i]){
             if(!visited[it]){

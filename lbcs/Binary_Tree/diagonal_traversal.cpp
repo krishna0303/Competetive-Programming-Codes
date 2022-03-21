@@ -112,7 +112,7 @@ struct Node
 vector<int> diagonal(Node *root)
 {
    // your code here
-    vector<int>v;
+   vector<int>v;
    if(!root){
        return v;
        

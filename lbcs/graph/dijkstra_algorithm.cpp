@@ -162,7 +162,7 @@ int main(){
 		for(int i = 0; i < E; i++){
 			int u, v,w;
 			cin >> u >> v>>w;
-			adj[u].push_back({v,w});
+			adj[u-1].push_back({v-1,w});
 			
 		}
         int src,dst;

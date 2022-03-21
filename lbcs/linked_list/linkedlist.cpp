@@ -1,4 +1,5 @@
 // in this file all the functionality of linked list is given
+//real life example is train,image viewer , url of websites, editor undo and redo
 
 #include<bits/stdc++.h>
 using namespace std;

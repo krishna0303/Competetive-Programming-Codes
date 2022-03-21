@@ -69,7 +69,7 @@ This multiple time calling DFS/BFS degrades the Time Complexity, hence Topologic
             for(auto it:adj[node]){
                 if(distance[node]!=INF){
                      if((distance[node]+it.second)<distance[it.first]){
-                    distance[it.first]=distance[node]+it.second;
+                     distance[it.first]=distance[node]+it.second;
                 }
 
                 }

@@ -34,7 +34,7 @@ class Solution {
 //         return dp[n][m];
 //     }
   //top-down approach (recursive method)
-     int dp[101][101];
+    int dp[101][101];
     int editDistanceUtil(string s, string t,int n,int m) {
         // Code here
         if(n==0){

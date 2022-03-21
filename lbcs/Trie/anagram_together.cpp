@@ -1,4 +1,4 @@
-
+//this is basic file of trie in c++ with all operations in string using trie
 
 //Using Trie
 
@@ -95,6 +95,7 @@ vector<vector<string> > Anagrams(vector<string>& string_list)
         }
     }
     // cout<<maxGroups<<endl;
+    //main logic code block that  uses maxGroups
     for(int i=0;i<maxGroups;i++){
         vector<string>v1;
         // cout<<v[i].size()<<endl;

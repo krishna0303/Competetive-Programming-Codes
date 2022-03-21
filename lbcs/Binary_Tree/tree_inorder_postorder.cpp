@@ -75,8 +75,7 @@ int main()
 {
 	int t;
 	cin>>t;
-	while(t--)
-	{
+	
 		int n;
 		cin>>n;
 		
@@ -87,8 +86,8 @@ int main()
 			cin>> preorder[i];
 		Solution obj;
 		Node *root = obj.buildTree(inorder, preorder, n);
-		printPostOrder(root);
+		
 		cout<< endl;
-	}
+	
 }
   // } Driver Code Ends

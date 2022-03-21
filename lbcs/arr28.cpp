@@ -1,40 +1,44 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int n;
-    cin>>n;
-    int *arr=new int[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
+    cin >> n;
+    int *arr = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
     }
-    int maxPro=0;
-    
-    int minM=1;
-    int maxM=1;
-    for(int i=0;i<n;i++){
-        if(arr[i]>0){
-            maxM=maxM*arr[i];
-            minM=min(minM*arr[i],1);
-        }else if(arr[i]<0){
-            int temp=maxM;
-            maxM=max(minM*arr[i],1);
-            minM=temp*arr[i];
+    int maxPro = 0;
 
-
-        }else{
-            minM=1;
-            maxM=1;
+    int minM = 1;
+    int maxM = 1;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] > 0)
+        {
+            maxM = maxM * arr[i];
+            minM = min(minM * arr[i], 1);
         }
-        if(maxPro>maxM){
-            maxPro=maxM;
+        else if (arr[i] < 0)
+        {
+            int temp = maxM;
+            maxM = max(minM * arr[i], 1);
+            minM = temp * arr[i];
+        }
+        else
+        {
+            minM = 1;
+            maxM = 1;
+        }
+        if (maxPro < maxM)
+        {
+            maxPro = maxM;
         }
     }
-
-
-
 
     return 0;
 }

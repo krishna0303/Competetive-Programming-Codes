@@ -99,33 +99,59 @@ struct Node
     }
 }; */
 
-class Solution
+// class Solution
+// {
+// public:
+//     int helper(Node *root, int &ans)
+//     {
+//         if (!root)
+//             return 0;
+
+//         int left = helper(root->left, ans);
+//         int right = helper(root->right, ans);
+
+//         int a = root->data;
+//         int nodeMax = max(max(a, a + left + right), max(a + left, a + right));
+
+//         ans = max(ans, nodeMax);
+
+//         int singlePathSum = max(a, max(a + left, a + right));
+//         return singlePathSum;
+//     }
+
+//     int findMaxSum(Node *root)
+//     {
+//         int ans = INT_MIN;
+//         helper(root, ans);
+//         return ans;
+//     }
+// };
+
+struct TreeNode
 {
-public:
-    int helper(Node *root, int &ans)
-    {
-        if (!root)
-            return 0;
-
-        int left = helper(root->left, ans);
-        int right = helper(root->right, ans);
-
-        int a = root->data;
-        int nodeMax = max(max(a, a + left + right), max(a + left, a + right));
-
-        ans = max(ans, nodeMax);
-
-        int singlePathSum = max(a, max(a + left, a + right));
-        return singlePathSum;
-    }
-
-    int findMaxSum(Node *root)
-    {
-        int ans = INT_MIN;
-        helper(root, ans);
-        return ans;
-    }
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+int solve(TreeNode *root, int &ans)
+{
+    if (!root)
+    {
+        return 0;
+    }
+    int l = solve(root->left, ans);
+    int r = solve(root->right, ans);
+    int temp = max(root->val, max(l, r) + root->val);
+    ans = max(temp, max(ans, l + r + root->val));
+    return temp;
+}
+int maxPathSum(TreeNode *A)
+{
+    int ans = INT_MIN;
+    solve(A, ans);
+    return ans;
+}
 
 // { Driver Code Starts.
 
@@ -139,8 +165,8 @@ int main()
         string s;
         getline(cin, s);
         Node *root = buildTree(s);
-        Solution ob;
-        cout << ob.findMaxSum(root) << endl;
+        // Solution ob;
+        // cout << ob.findMaxSum(root) << endl;
     }
     return 0;
 }
