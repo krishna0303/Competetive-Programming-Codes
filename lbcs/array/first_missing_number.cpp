@@ -15,8 +15,6 @@ Given [1,2,0] return 3,
 
 Your algorithm should run in O(n) time and use constant space.
 watch rachit jain video for better understanding
-
-
 */
 
 int firstMissingPositive(vector<int> &A)

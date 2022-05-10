@@ -122,7 +122,7 @@ public:
 
         while(!pq.empty()){
             int node=pq.top().second;
-			int dist=pq.top().second;
+			int dist=pq.top().first;
             pq.pop();
             for(auto it:adj[node]){
                 
